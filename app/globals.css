@@ -1,21 +1,172 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap");
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@responsive {
+  body {
+    @apply p-1; /* Add padding to the body for better readability */
+    font-family: "Zen Maru Gothic", sans-serif;
+  }
+  body {
+    font-family: "Zen Maru Gothic", sans-serif;
+  }
+
+  .exo {
+    font-family: "Exo", sans-serif;
+    font-weight: 400;
+  }
+
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  h4 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .navfont {
+    font-family: "Roboto", sans-serif;
+  }
+
+  h5 {
+    font-family: "Playfair Display", serif;
+  }
+
+  Button {
+    font-family: "Roboto", serif;
+  }
+
+  .mainfont {
+    font-family: "Exo", sans-serif;
+    font-weight: 400;
+  }
+
+  .hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+}
+@media (max-width: 640px) {
+  .custom-container {
+    padding: 2rem;
+  }
+}
+
+.nav-button {
+  background-color: #cbf5ef;
+}
+
+.nav-background {
+  /* background-color: #355070; */
+  background-color: #360568;
+}
+
+.outter-box {
+  /* background-color: #6d597a  */
+  background-color: #360568;
+}
+
+.inner-box {
+  background-color: #f9fcfb;
+}
+
+.layout-background {
+  background-color: rgb(249, 247, 255);
+}
+
+.highlight-nav {
+  background-color: bg-indigo-500;
+  /*  */
+}
+
+.highlight.highlight:hover {
+  background-color: #9ac6c5 !important;
+  box-shadow: 0 0 0 2px #a5e6ba;
+}
+
+.custom-ring-active.custom-ring-active {
+  box-shadow: 0 0 0 2px #a5e6ba;
+  /* box-shadow: 0 0 0 2px #eaac8b;  */
 }
