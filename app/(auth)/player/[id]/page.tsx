@@ -8,7 +8,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { SlGameController } from 'react-icons/sl';
 import { useRouter } from 'next/navigation';
-import { useToast } from '@/components/ui/use-toast';
+import { useToast } from '@/app/components/ui/use-toast';
 
 
 interface UserProfileProps {

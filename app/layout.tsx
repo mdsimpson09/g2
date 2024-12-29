@@ -32,11 +32,46 @@
 //     </html>
 //   );
 // }
+// import type { Metadata } from "next";
+// import { Inter } from 'next/font/google';
+// import "./globals.css";
+// import { Providers } from "./components/Providers";
+// import Navbar from "./components/Navbar";
+
+// const inter = Inter({ subsets: ['latin'] });
+
+// export const metadata: Metadata = {
+//   title: "Gamer Date",
+//   description: "Connect with fellow gamers",
+// };
+
+// export default function RootLayout({
+//   children,
+// }: {
+//   children: React.ReactNode;
+// }) {
+//   return (
+//     <html lang="en">
+//       <body className={`${inter.className} antialiased`}>
+//         <Providers>
+//           <Navbar />
+//           <main className="pt-20 px-4 max-w-7xl mx-auto">
+//             <div className="container mx-auto">
+//               {children}
+//             </div>
+//           </main>
+//         </Providers>
+//       </body>
+//     </html>
+//   );
+// }
+
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google';
 import "./globals.css";
 import { Providers } from "./components/Providers";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -55,12 +90,15 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <Providers>
           <Navbar />
-          <main className="pt-20 px-4 max-w-7xl mx-auto">
-            <div className="container mx-auto">
+          {/* <main className="pt-20 px-4 max-w-7xl mx-auto">
+            <div className="container mx-auto"> */}
+         <main className="pt-20 w-full bg-gray-900">
+         <div className="max-w-7xl mx-auto">
               {children}
             </div>
           </main>
         </Providers>
+        <Footer />
       </body>
     </html>
   );

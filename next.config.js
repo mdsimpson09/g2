@@ -5,10 +5,16 @@
 // };
 
 // export default nextConfig;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    config.module.rules.push({
+      test: /\.html$/,
+      use: 'html-loader',
+    });
+
+    return config;
+  },
 };
 
 module.exports = nextConfig;
