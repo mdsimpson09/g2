@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import MeetUI from './MeetUI';
-import MeetControls from './MeetControls';
+// import MeetControls from './MeetControls';
 import { SlGameController } from 'react-icons/sl';
 
 interface PlayerProfile {
@@ -72,7 +72,7 @@ const Meet: React.FC = () => {
       <MeetUI player={profileData} toggleRefresh={handleToggleRefresh} />
       </div>
       <div className="">
-      <MeetControls player={profileData} toggleRefresh={handleToggleRefresh}/>
+      {/* <MeetControls player={profileData} toggleRefresh={handleToggleRefresh}/> */}
     </div>
 
     </div>

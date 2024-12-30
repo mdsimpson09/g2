@@ -439,7 +439,7 @@ const EditForm = () => {
           </div>
 
         {/* Form Section */}
-        <div className="bg-gray-900 p-8 rounded-lg shadow-lg">
+        <div className="bg-gray-900 rounded-lg shadow-lg">
           <h2 className="flex justify-center text-3xl font-semibold mb-6 text-purple-400">Edit Your Profile</h2>
 
           <Form {...form}>
